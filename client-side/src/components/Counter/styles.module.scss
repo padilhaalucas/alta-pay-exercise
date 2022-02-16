@@ -1,0 +1,41 @@
+@import '../../styles/layout/width';
+@import "../../styles/base/fonts";
+
+.plus-button {
+  background-color: var(--colour__main);
+  color: var(--colour__bg);
+  font-size: '24px';
+  border-radius: '10px 0px 0px 10px';
+}
+.plus-button:hover {
+  background-color: var(--colour__positive1);
+  color: var(--colour__bg);
+  box-shadow: '2px 2px 5px rgba(200, 200, 200, 0.9)';
+}
+
+.counter {
+  color: var(--colour__positive1);
+  font-size: '24px';
+  font-family: $roboto-slab;
+}
+  
+.minusButtonDisabled {
+  color: var(--colour__bg);
+  font-size: '24px';
+  border-radius: '0px 10px 10px 0px';
+}
+.minusButtonDisabled:hover {
+  color: var(--colour__bg);
+}
+
+.minusButtonEnabled {
+  background-color: var(--colour__positive1);
+  color: var(--colour__bg);
+  font-size: '24px';
+  border-radius: '0px 10px 10px 0px';
+}
+.minusButtonEnabled:hover {
+  background-color: var(--colour__positive1);
+  color: var(--colour__bg);
+  box-shadow: '2px 2px 5px rgba(200, 200, 200, 0.9)';
+}

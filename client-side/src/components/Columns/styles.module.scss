@@ -1,0 +1,21 @@
+@import "../../styles/abstracts/mixins";
+
+.columns {
+	display: grid;
+	column-gap: var(--colGap);
+	row-gap: var(--gutter);
+	grid-template-columns: repeat(var(--cols), 1fr);
+	--cols__md: var(--cols);
+	--cols__lg: var(--cols__md);
+	--cols__xl: var(--cols__lg);
+
+	@include responsive($tablet-p) {
+		grid-template-columns: repeat(var(--cols__md, var(--cols)), 1fr);
+	}
+	@include responsive($tablet-l) {
+		grid-template-columns: repeat(var(--cols__lg, var(--cols__md)), 1fr);
+	}
+	@include responsive($desktop) {
+		grid-template-columns: repeat(var(--cols__xl, var(--cols__lg)), 1fr);
+	}
+}

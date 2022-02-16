@@ -1,0 +1,106 @@
+@import "../../styles/abstracts/mixins";
+@import "../../styles/layout/spacing";
+
+.button {
+	-webkit-appearance: none;
+	background-color: transparent;
+	border: none;
+	--btn__borderColor: var(--colour__main);
+	text-decoration: none;
+	line-height: 1;
+  @extend .mHor-1;
+	@include on-event {
+		text-decoration: none;
+	}
+	@include on-active {
+		text-decoration: none;
+	}
+}
+
+.size {
+	&--sm {
+		font-size: 0.8rem;
+		padding: 1em 1.618em;
+		@include responsive($tablet-p) {
+			padding: 0.618em 1.3em;
+		}
+		font-weight: 600;
+	}
+	&--md {
+		padding: 1em 1.618em;
+		@include responsive($tablet-p) {
+			padding: 0.618em 1.618em;
+		}
+	}
+	&--lg {
+		padding: 1em 1.618em;
+		@include responsive($tablet-p) {
+			padding: 1em 2em;
+		}
+	}
+}
+
+.type {
+	&--primary {
+		background: black;
+		color: white;
+		position: relative;
+		white-space: nowrap;
+    cursor: pointer;
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: var(--bg);
+			top: 0;
+			left: 0;
+			z-index: -1;
+			opacity: 1;
+			border-radius: 999px;
+			transition: opacity 0.15s ease-out;
+		}
+		@include on-event {
+			&:before {
+				opacity: 0.8;
+			}
+		}
+		@include on-active {
+			&:before {
+				opacity: 1;
+			}
+		}
+		&.disabled {
+			opacity: 0.3;
+			pointer-events: none;
+		}
+	}
+
+	&--secondary {
+		background: transparent;
+		color: var(--colour__primary);
+		position: relative;
+		white-space: nowrap;
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: var(--colour__secondary);
+			top: 0;
+			left: 0;
+			z-index: -1;
+			opacity: 0.5;
+			border-radius: 999px;
+			transition: opacity 0.15s ease-out;
+		}
+		@include on-event {
+			color: var(--colour__primary);
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+}

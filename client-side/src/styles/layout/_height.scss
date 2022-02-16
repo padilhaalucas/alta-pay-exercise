@@ -1,0 +1,14 @@
+@for $i from 1 through 100 {
+	.vh-height-#{$i} {  
+		height: $i * 1vh !important;
+	}
+	.rem-height-#{$i} {  
+		height: $i * 1rem !important;
+	}
+	.em-height-#{$i} {  
+		height: $i * 1em !important;
+	}
+	.px-height-#{$i} {  
+		height: $i * 10px !important;
+	}
+}

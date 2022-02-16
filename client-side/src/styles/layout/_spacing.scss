@@ -1,0 +1,42 @@
+@for $i from 1 through 50 {
+	.mVer-#{$i} {                    // Margin Vertical
+		margin-top: $i * 1rem !important;
+		margin-bottom: $i * 1rem !important;
+	}
+	.mHor-#{$i} {                    // Margin Horizontal
+		margin-left: $i * 1rem !important;
+		margin-right: $i * 1rem !important;
+	}
+	.mt-#{$i} {                      // Margin Top
+		margin-top: $i * 1rem !important;
+	}
+	.mt-n#{$i} {                     // Margin Top Negative
+		margin-top: $i * -1rem !important;
+	}
+	.mr-#{$i} {                      // Margin Right
+		margin-right: $i * 1rem !important;
+	}
+	.mr-n#{$i} {                     // Margin Right Negative
+		margin-right: $i * -1rem !important;
+	}
+	.mb-#{$i} {                      // Margin Bottom
+		margin-bottom: $i * 1rem !important;
+	}
+	.mb-n#{$i} {                     // Margin Bottom Negative
+		margin-bottom: $i * -1rem !important;
+	}
+	.mt-#{$i} {                      // Margin Left
+		margin-left: $i * 1rem !important;
+	}
+	.mt-n#{$i} {                     // Margin Left Negative
+		margin-left: $i * -1rem !important;
+	}
+	.pVer-#{$i} {                     // Padding Vertical
+		padding-top: $i * 1rem !important;
+		padding-bottom: $i * 1rem !important;
+	}
+	.pHor-#{$i} {                     // Padding Horizontal
+		padding-right: $i * 1rem !important;
+		padding-left: $i * 1rem !important;
+	}
+}

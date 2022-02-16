@@ -1,0 +1,49 @@
+.grid {
+	display: grid;
+	column-gap: var(--colGap);
+
+	&--full {
+		grid-template-columns:
+			[screen-start] max(var(--colGap), calc(var(--sidebearing)))
+			[grid-start col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [col-7] 1fr [col-8] 1fr [col-9] 1fr [col-10] 1fr [col-11] 1fr [col-12] 1fr [grid-end] max(
+				var(--colGap),
+				calc(var(--sidebearing))
+			)
+			[screen-end];
+	}
+	&--inner {
+		padding: 0 max(var(--gutter), calc(var(--sidebearing) + var(--colGap)));
+		grid-template-columns: [screen-start grid-start col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [col-7] 1fr [col-8] 1fr [col-9] 1fr [col-10] 1fr [col-11] 1fr [col-12] 1fr [grid-end screen-end];
+	}
+}
+
+.container {
+	padding: 0 max(var(--gutter), calc(var(--sidebearing) + var(--gutter)));
+}
+
+.loop {
+	@extend .grid;
+	column-gap: var(--colGap);
+	row-gap: var(--gutter);
+
+	&--sm {
+		grid-template-columns: 1fr 1fr;
+		@include responsive($tablet-l) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+
+	&--md {
+		grid-template-columns: 1fr;
+		@include responsive($tablet-p) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	&--lg {
+		grid-template-columns: 1fr;
+		@include responsive($tablet-p) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}

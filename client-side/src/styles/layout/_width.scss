@@ -1,0 +1,14 @@
+@for $i from 1 through 100 {
+	.vw-width-#{$i} {  
+		width: $i * 1vw !important;
+	}
+	.rem-width-#{$i} {  
+		width: $i * 1rem !important;
+	}
+	.em-width-#{$i} {  
+		width: $i * 1em !important;
+	}
+	.px-width-#{$i} {  
+		width: $i * 10px !important;
+	}
+}

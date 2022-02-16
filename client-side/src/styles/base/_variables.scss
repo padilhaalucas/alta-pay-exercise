@@ -1,0 +1,34 @@
+:root {
+	--colour__bg: #ffffff;
+	--colour__main: #333333;
+	--colour__accent: var(--colour__positive4);
+
+	--colour__negative4: #fa3817;
+	--colour__negative3: #fa6b2b;
+	--colour__negative2: #ffb06e;
+	--colour__negative1: #fce0b2;
+
+	--colour__positive4: #73b0a6;
+	--colour__positive3: #008a96;
+	--colour__positive2: #007094;
+	--colour__positive1: #005fa0;
+
+	--container__width: 1600px;
+	--navbar__height: 76px;
+
+	--gutter: 1rem;
+	--colGap: calc(var(--gutter) / 2);
+	@include responsive($tablet-p) {
+		--colGap: var(--gutter);
+	}
+
+	@include responsive($tablet-l) {
+		--gutter: 2rem;
+	}
+
+	--leading: 1.618rem; //base leading for type
+
+	--sidebearing: calc((100vw - var(--container__width)) / 2);
+
+	--easing: cubic-bezier(0.16, 1, 0.3, 1);
+}

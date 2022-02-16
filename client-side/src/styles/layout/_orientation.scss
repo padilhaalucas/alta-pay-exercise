@@ -1,0 +1,61 @@
+.row {
+	display: flex;
+  flex-direction: row;
+  align-items: center;
+
+	&--ctr {
+    @extend .row;
+    justify-content: center;
+  }
+	&--fs {
+    @extend .row;
+    justify-content: flex-start;
+  }
+	&--fe {
+    @extend .row;
+    justify-content: flex-end;
+  }
+	&--sa {
+    @extend .row;
+    justify-content: space-around;
+  }
+	&--se {
+    @extend .row;
+    justify-content: space-evenly;
+  }
+	&--sb {
+    @extend .row;
+    justify-content: space-between;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  &--ctr { 
+    @extend .col;
+    align-items: center;
+  }
+	&--fs { 
+    @extend .col;
+    align-items: flex-start;
+  }
+	&--fe { 
+    @extend .col;
+    align-items: flex-end;
+  }
+	&--sa { 
+    @extend .col;
+    align-items: space-around;
+  }
+	&--se { 
+    @extend .col;
+    align-items: space-evenly;
+  }
+	&--sb { 
+    @extend .col;
+    align-items: space-between;
+  }
+}

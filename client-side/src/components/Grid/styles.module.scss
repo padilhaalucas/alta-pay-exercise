@@ -1,0 +1,57 @@
+@import "../../styles/abstracts/mixins";
+
+.grid {
+	display: grid;
+	gap: calc(var(--gap) / 2);
+	@include responsive($tablet-p) {
+		gap: var(--gap);
+	}
+
+	grid-template-columns:
+		[screen-start]
+		max(var(--gap) / 2, var(--sidebearing))
+		[grid-start col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [col-7] 1fr [col-8] 1fr [col-9] 1fr [col-10] 1fr [col-11] 1fr [col-12] 1fr [grid-end]
+		max(var(--gap) / 2, var(--sidebearing))
+		[screen-end];
+
+	&.container {
+		max-width: var(--container__width);
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: var(--gap);
+		padding-right: var(--gap);
+		grid-template-columns: [screen-start grid-start col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [col-7] 1fr [col-8] 1fr [col-9] 1fr [col-10] 1fr [col-11] 1fr [col-12] 1fr [grid-end screen-end];
+	}
+	&.subgrid {
+		max-width: var(--container__width);
+		margin-left: auto;
+		margin-right: auto;
+		grid-template-columns: [screen-start grid-start col-1] 1fr [col-2] 1fr [col-3] 1fr [col-4] 1fr [col-5] 1fr [col-6] 1fr [col-7] 1fr [col-8] 1fr [col-9] 1fr [col-10] 1fr [col-11] 1fr [col-12] 1fr [grid-end screen-end];
+	}
+}
+
+.col {
+	--colMd: var(--colSm);
+	--colLg: var(--colMd);
+	--colXl: var(--colLg);
+	--rowMd: var(--rowSm);
+	--rowLg: var(--rowMd);
+	--rowXl: var(--rowLg);
+
+	grid-column: var(--colSm);
+	grid-row: var(--rowSm);
+	z-index: var(--zIndex);
+
+	@include responsive($tablet-p) {
+		grid-column: var(--colMd);
+		grid-row: var(--rowMd);
+	}
+	@include responsive($tablet-l) {
+		grid-column: var(--colLg);
+		grid-row: var(--rowLg);
+	}
+	@include responsive($desktop) {
+		grid-column: var(--colXl);
+		grid-row: var(--rowXl);
+	}
+}

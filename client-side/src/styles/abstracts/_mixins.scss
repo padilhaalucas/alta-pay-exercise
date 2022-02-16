@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+	@if $self {
+		&,
+		&:hover {
+			@media (pointer: fine) {
+				@content;
+			}
+		}
+	} @else {
+		&:hover {
+			@media (pointer: fine) {
+				@content;
+			}
+		}
+	}
+}
+
+@mixin on-active($self: false) {
+	@if $self {
+		&,
+		&:active,
+		&:focus {
+			@content;
+		}
+	} @else {
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+	#{$context} & {
+		@content;
+	}
+}
+
+@import "breakpoint-sass";
+$phone: max-width 37.5em;
+$tablet-p: min-width 37.5625em;
+$tablet-p-or-less: max-width 56.22em;
+$tablet-l: min-width 56.25em;
+$desktop: min-width 75em;
+
+@mixin responsive($breakpoint) {
+	@include breakpoint($breakpoint) {
+		@content;
+	}
+}
+
+@mixin hide-scrollbar() {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}

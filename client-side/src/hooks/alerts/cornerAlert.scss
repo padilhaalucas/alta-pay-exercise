@@ -1,0 +1,247 @@
+@import '../../styles/base/fonts';
+
+body.confirmAlertContainer-element {
+  overflow: hidden;
+}
+
+.react-confirm-alert-blur {
+  filter: url(#gaussian-blur);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.react-confirm-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  opacity: 0;
+  -webkit-animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+  -moz-animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+  -o-animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+  animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
+}
+
+.corner-alertContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.corner-messageContainer {
+  width: 75%;
+}
+
+.corner-confirmAlertContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
+}
+
+.blurOnContact {
+  filter: blur(5px);
+}
+
+.corner-primaryAlertButtonSuccess {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: $roboto-slab;
+  font-size: 1.5em;
+  cursor: pointer;
+  background-color: #38B6FF;
+}
+
+.corner-react-confirm-alert-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.corner-containerSuccess {
+  width: 25rem;
+  height: 5em;
+  border: 5px solid #43c0c4;
+  padding: 15px 15px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(190, 190, 190, 0.8);
+  color: #43c0c4;
+  position: absolute;
+  top: 51rem;
+  right: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.corner-title {
+  font-family: $roboto-slab;
+  font-size: 1.5em !important;
+  font-weight: bolder;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: flex-start;
+}
+
+
+.corner-react-confirm-alert-button-group {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.corner-react-confirm-alert-button-group > button {
+  outline: none;
+  background: #333;
+  border: none;
+  display: inline-block;
+  padding: 6px 18px;
+  color: #eee;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.corner-primaryAlertButtonSuccess {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: $roboto-slab;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #38B6FF;
+}
+
+/* Warning Alerts */
+
+.corner-containerAlert {
+  width: 15em;
+  border: 3px solid #f8cb38;
+  padding: 15px 15px;
+  color: #221b02;
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}
+
+.corner-primaryAlertButtonWarning {
+  padding: 6px 30px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: $roboto-slab;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #3f4f58;
+}
+
+.corner-containerAlert > .corner-messageContainer > h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $roboto-slab;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.corner-containerAlert > .corner-messageContainer > p {
+  font-family: $roboto-slab;
+  width: 14em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+/* Error Alerts */
+
+.corner-containerError {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 7em;
+  padding: 5px 5px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(190, 190, 190, 0.8);
+  position: absolute;
+  border: 3px solid red;
+  color: red;
+  top: 51rem;
+  right: 5rem;
+}
+
+.corner-primaryAlertButtonError1 {
+  padding: 6px 42px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: $roboto-slab;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #3f4f58;
+}
+
+.corner-primaryAlertButtonError2 {
+  padding: 6px 65px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-family: $roboto-slab;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #3f4f58;
+}
+
+.corner-containerError > .corner-messageContainer > h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $roboto-slab;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.corner-containerError > .corner-messageContainer > p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: $roboto-slab;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+@keyframes react-confirm-alert-fadeIn {
+  from {
+    opacity: 0;
+    right: -10em;
+  }
+  to {
+    opacity: 1;
+    right: 2em
+  }
+}
